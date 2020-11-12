@@ -253,7 +253,18 @@ while not setupdone:
                 bggSetup = False
             else:
                 print("I require a valid value")
-
+#config
+    elif question == ("config"):
+        r = 255
+        g = 0
+        b = 0
+        x2 = 1500
+        y2 = 1000
+        xSpos = 750
+        ySpos = 500
+        yvel = 20
+        xvel = 15
+        print('config executed')
 
 
 if bgrandomr:
