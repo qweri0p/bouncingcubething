@@ -35,9 +35,10 @@ while not setupdone:
     question = input()
 #help
     if question == ("help"):
+    
         print("Useable commands include:")
         print("-start")
-        print("-color")
+        print("-colour")
         print("-resolution")
         print("-help")
         print("-speed")
@@ -45,14 +46,29 @@ while not setupdone:
         print("-spos")
         print("-fps")
         print("-background")
+    elif question == ("help spos"):
+        print("Spos lets you change the start position of the cube.")
+    elif question == ("help colour"):
+        print("Colour lets you change the colour of the cube.")
+    elif question == ("help resolution") or question == ("help res"):
+        print("Resolution lets you change the size of the pygame window.")
+    elif question == ("help speed"):
+        print("Speed allows you to change the vertical and horizontal speed of the cube.")
+    elif question == ("help exit"):
+        print("Exits the program.")
+    elif question == ("help fps"):
+        print("Fps allows you to change the maximum fps of the pygame window.")
+    elif question == ("help background") or question == ("help bg"):
+        print("Background lets you change the colour of the background.")
+        
 #start
     elif question == ("start"):
         print("Have you set up the color, the resolution, the speed and the startposition?")
         question2 = input()
         if question2 == ("y") or question2 == ("yes"):
             setupdone = True
-#color
-    elif question == ("color"):
+#colour
+    elif question == ("colour"):
         rcolorsetup = True
         while rcolorsetup == True:
             print("Give me a red value under 256.")
