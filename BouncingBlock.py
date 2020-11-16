@@ -26,6 +26,7 @@ xvel = 15
 xsize = 50
 ysize = 50
 setupdone = False
+drawBG = False
 clear()
 print("This is the setup.") 
 print("Type help for a list of commands.")
@@ -46,6 +47,7 @@ while not setupdone:
         print("-background")
         print("-size")
         print("-config")
+        print("-drawbg")
     elif question == ('help start'):
         print("Start exits the setup and launches a pygame window.")
     elif question == ("help spos"):
@@ -69,7 +71,9 @@ while not setupdone:
     elif question == ("version") or question == ("ver"):
         print("BouncingCubeThing V1.2 by qweriop")
         print("https://github.com/qweri0p/BouncingCubeThing")
-
+    elif question == ("help drawbg"):
+        print("Drawbg toggles if the background should update every frame. Drawbg is currently", drawBG,end=".")
+        print()
 #start
     elif question == ("start"):
         print("Have you set up the color, the resolution, the speed and the startposition?")
@@ -312,6 +316,19 @@ while not setupdone:
                 xsizeSetup = False
             else:
                 print("I require a valid value.")
+#drawbg
+    elif question == ("drawbg") or question == ("draw"):
+        if drawBG == False:
+            drawBG = True
+            print("Background will now be updated every frame.")
+        else:
+            drawBG = False
+            print("Background will not be updated every frame.")
+#nggyu
+    elif question == ("nggyu") or question == ("never gonna give you up"):
+        print(":)")
+
+
 if bgrandomr:
     bgr = random.randrange(256)
 if bgrandomb:
@@ -335,6 +352,14 @@ while not done:
     if randomcg:
         g = random.randrange(256)
     #draw shit
+    if drawBG == True:
+        if bgrandomr == True:
+            bgr = random.randrange(256)
+        if bgrandomb == True:
+            bgb = random.randrange(256)
+        if bgrandomg == True:
+            bgg = random.randrange(256)
+        screen.fill((bgr, bgb, bgg))
     pygame.draw.rect(screen, [r, g, b], [x, y, xsize, ysize], 0)
     #end draw shit
     #boink
@@ -395,4 +420,8 @@ exit()
     #bgrandomb
     #bgrandomg
 #definitive vars
-    #
+    #xSpos
+    #ySpos
+    #r
+    #g
+    #b
