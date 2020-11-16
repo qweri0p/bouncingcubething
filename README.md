@@ -1,11 +1,11 @@
 # BouncingCubeThing
 Its a simple bouncing cube complete with setup.
 
-*THIS SCRIPT REQUIRES PYGAME*
+*THIS SCRIPT REQUIRES [PYGAME](https://pygame.org)*
 
-Pygame is installable using: "pip install pygame".
+[Pygame](https://pygame.org) is installable using: "pip install pygame".
 
-https://pygame.org
+
 
 The setup should help you through the start.
 The default config is made for testing.
