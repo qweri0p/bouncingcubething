@@ -2,10 +2,6 @@ import pygame
 import time
 import random
 import os
-
-
-
-
 fps = 60
 bgr = 255
 bgb = 255
@@ -27,15 +23,16 @@ xSpos = 750
 ySpos = 500
 yvel = 20
 xvel = 15
+xsize = 50
+ysize = 50
 setupdone = False
 clear()
 print("This is the setup.") 
-print("Use help for a list of commands.")
+print("Type help for a list of commands.")
 while not setupdone:
-    question = input()
+    question = input(">>>")
 #help
-    if question == ("help"):
-    
+    if question == ("help"):    
         print("Useable commands include:")
         print("-start")
         print("-colour")
@@ -46,6 +43,10 @@ while not setupdone:
         print("-spos")
         print("-fps")
         print("-background")
+        print("-size")
+        print("-config")
+    elif question == ('help start'):
+        print("Start exits the setup and launches a pygame window.")
     elif question == ("help spos"):
         print("Spos lets you change the start position of the cube.")
     elif question == ("help colour"):
@@ -59,8 +60,11 @@ while not setupdone:
     elif question == ("help fps"):
         print("Fps allows you to change the maximum fps of the pygame window.")
     elif question == ("help background") or question == ("help bg"):
-        print("Background lets you change the colour of the background.")
-        
+        print("Background lets you change the colour of the background.")     
+    elif question == ("help config"):
+        print("Config loads a basic configuration that is meant for testing purposes.")
+    elif question == ("help size"):
+        print("Size lets you change the height and width of the cube.")
 #start
     elif question == ("start"):
         print("Have you set up the color, the resolution, the speed and the startposition?")
@@ -281,15 +285,34 @@ while not setupdone:
         yvel = 20
         xvel = 15
         print('config executed')
-
-
+#size
+    elif question == ('size'):
+        ysizeSetup = True
+        while ysizeSetup:
+            print("What should be the height of the cube?")
+            height1 = input()
+            if height1.isdigit:
+                height1 = int(height1)
+                ysize = height1
+                ysizeSetup = False
+            else:
+                print("I require a valid value.")
+        xsizeSetup = True
+        while xsizeSetup:
+            print("What should be the width of the cube?")
+            width1 = input()
+            if width1.isdigit:
+                width1 = int(width1)
+                xsize = width1
+                xsizeSetup = False
+            else:
+                print("I require a valid value.")
 if bgrandomr:
     bgr = random.randrange(256)
 if bgrandomb:
     bgb = random.randrange(256)
 if bgrandomg:
     bgg = random.randrange(256)
-
 x = xSpos
 y = ySpos
 screensetup = (x2, y2)
@@ -307,7 +330,7 @@ while not done:
     if randomcg:
         g = random.randrange(256)
     #draw shit
-    pygame.draw.rect(screen, [r, g, b], [x, y, 50, 50], 0)
+    pygame.draw.rect(screen, [r, g, b], [x, y, xsize, ysize], 0)
     #end draw shit
     #boink
     x = x + xvel
@@ -324,3 +347,45 @@ while not done:
     Clock.tick(fps)
 pygame.quit
 exit()
+#list of vars
+#setupvars
+    #setupdone - setup loop
+    #rcolorsetup - red colour setup
+    #bcolorsetup - blue colour setup
+    #gcolorsetup - green coulour setup
+    #xsetup - x resolution setup 
+    #ysetup - y resolution setup
+    #xspeedGot - x speed setup
+    #yspeedGot - y speed setup
+    #xSposSetup - x start position setup
+    #ySposSetup - y start position setup
+    #fpsSetup - max fps setup
+    #bgrSetup - red value of background setup
+    #bgbSetup - blue value of background setup
+    #bggSetup - green value of background setup
+    #ysizeSetup - height setup
+    #xsizeSetup - width setup
+    #done - main loop
+#tempvars
+    #rcolor
+    #bcolor
+    #gcolor
+    #ycolor
+    #xcolor
+    #xspeed
+    #yspeed
+    #xpos
+    #ypos
+    #tempFps
+    #backgroundr
+    #backgroundb
+    #backgroundg
+    #ysize
+    #xsize
+#randoms
+    #randomcr
+    #randomcb
+    #randomcg
+    #bgrandomr
+    #bgrandomb
+    #bgrandomg
