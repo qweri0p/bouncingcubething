@@ -34,6 +34,7 @@ while not setupdone:
 #help
     if question == ("help"):    
         print("Useable commands include:")
+        print("-version")
         print("-start")
         print("-colour")
         print("-resolution")
@@ -65,6 +66,10 @@ while not setupdone:
         print("Config loads a basic configuration that is meant for testing purposes.")
     elif question == ("help size"):
         print("Size lets you change the height and width of the cube.")
+    elif question == ("version") or question == ("ver"):
+        print("BouncingCubeThing V1.2 by qweriop")
+        print("https://github.com/qweri0p/BouncingCubeThing")
+
 #start
     elif question == ("start"):
         print("Have you set up the color, the resolution, the speed and the startposition?")
@@ -389,3 +394,5 @@ exit()
     #bgrandomr
     #bgrandomb
     #bgrandomg
+#definitive vars
+    #
