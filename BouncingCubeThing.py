@@ -14,7 +14,7 @@ bgrandomg = False
 randomcr = False
 randomcb = False
 randomcg = False
-name = BouncingCubeThing
+name = ("BouncingCubeThing")
 r = 255
 g = 0
 b = 0
@@ -336,12 +336,9 @@ while not setupdone:
         titlesetup = True
         while titlesetup:
             print('Give me a name for the pygame window.')
-            title1 = input()
-            if title1.isdigit:
-                print("I require a valid name made out of letters.")
-            else:
-                name = title1
-                titlesetup = False
+            title1 = str(input())
+            name = title1
+            titlesetup = False
 
 if bgrandomr:
     bgr = random.randrange(256)
