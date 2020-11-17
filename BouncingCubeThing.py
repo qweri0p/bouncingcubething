@@ -14,6 +14,7 @@ bgrandomg = False
 randomcr = False
 randomcb = False
 randomcg = False
+name = BouncingCubeThing
 r = 255
 g = 0
 b = 0
@@ -48,6 +49,7 @@ while not setupdone:
         print("-size")
         print("-config")
         print("-drawbg")
+        print("-title")
     elif question == ('help start'):
         print("Start exits the setup and launches a pygame window.")
     elif question == ("help spos"):
@@ -74,6 +76,8 @@ while not setupdone:
     elif question == ("help drawbg"):
         print("Drawbg toggles if the background should update every frame. Drawbg is currently", drawBG,end=".")
         print()
+    elif question == ('help title'):
+        print('Title lets you change the name lf the pygame window')
 #start
     elif question == ("start"):
         print("Have you set up the color, the resolution, the speed and the startposition?")
@@ -327,7 +331,17 @@ while not setupdone:
 #nggyu
     elif question == ("nggyu") or question == ("never gonna give you up"):
         print(":)")
-
+#title
+    elif question == ("title"):
+        titlesetup = True
+        while titlesetup:
+            print('Give me a name for the pygame window.')
+            title1 = input()
+            if title1.isdigit:
+                print("I require a valid name made out of letters.")
+            else:
+                name = title1
+                titlesetup = False
 
 if bgrandomr:
     bgr = random.randrange(256)
@@ -337,7 +351,9 @@ if bgrandomg:
     bgg = random.randrange(256)
 x = xSpos
 y = ySpos
+
 screensetup = (x2, y2)
+pygame.display.set_caption(name)
 screen = pygame.display.set_mode(screensetup)
 screen.fill((bgr, bgb, bgg))
 done = False
@@ -378,50 +394,60 @@ while not done:
 pygame.quit
 exit()
 #list of vars
-#setupvars
-    #setupdone - setup loop
-    #rcolorsetup - red colour setup
-    #bcolorsetup - blue colour setup
-    #gcolorsetup - green coulour setup
-    #xsetup - x resolution setup 
-    #ysetup - y resolution setup
-    #xspeedGot - x speed setup
-    #yspeedGot - y speed setup
-    #xSposSetup - x start position setup
-    #ySposSetup - y start position setup
-    #fpsSetup - max fps setup
-    #bgrSetup - red value of background setup
-    #bgbSetup - blue value of background setup
-    #bggSetup - green value of background setup
-    #ysizeSetup - height setup
-    #xsizeSetup - width setup
-    #done - main loop
-#tempvars
-    #rcolor
-    #bcolor
-    #gcolor
-    #ycolor
-    #xcolor
-    #xspeed
-    #yspeed
-    #xpos
-    #ypos
-    #tempFps
-    #backgroundr
-    #backgroundb
-    #backgroundg
-    #ysize
-    #xsize
-#randoms
-    #randomcr
-    #randomcb
-    #randomcg
-    #bgrandomr
-    #bgrandomb
-    #bgrandomg
-#definitive vars
-    #xSpos
-    #ySpos
-    #r
-    #g
-    #b
+    #setupvars
+        #setupdone - setup loop
+        #rcolorsetup - red colour setup
+        #bcolorsetup - blue colour setup
+        #gcolorsetup - green coulour setup
+        #xsetup - x resolution setup 
+        #ysetup - y resolution setup
+        #xspeedGot - x speed setup
+        #yspeedGot - y speed setup
+        #xSposSetup - x start position setup
+        #ySposSetup - y start position setup
+        #fpsSetup - max fps setup
+        #bgrSetup - red value of background setup
+        #bgbSetup - blue value of background setup
+        #bggSetup - green value of background setup
+        #ysizeSetup - height setup
+        #xsizeSetup - width setup
+        #titlesetup - title setup
+        #done - main loop
+    #tempvars
+        #rcolor
+        #bcolor
+        #gcolor
+        #ycolor
+        #xcolor
+        #xspeed
+        #yspeed
+        #xpos
+        #ypos
+        #tempFps
+        #backgroundr
+        #backgroundb
+        #backgroundg
+        #ysize
+        #xsize
+        #title1
+    #randoms
+        #randomcr
+        #randomcb
+        #randomcg
+        #bgrandomr
+        #bgrandomb
+        #bgrandomg
+    #definitive vars
+        #xSpos
+        #ySpos
+        #r
+        #g
+        #b
+        #y2
+        #x2
+        #bgr
+        #bgb
+        #bgg
+        #yvel
+        #xvel
+        #name
