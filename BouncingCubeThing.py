@@ -348,7 +348,8 @@ if bgrandomg:
     bgg = random.randrange(256)
 x = xSpos
 y = ySpos
-
+yborder = y2 - ysize
+xborder = x2 - xsize
 screensetup = (x2, y2)
 pygame.display.set_caption(name)
 screen = pygame.display.set_mode(screensetup)
@@ -378,11 +379,11 @@ while not done:
     #boink
     x = x + xvel
     y = y + yvel
-    if x >= x2:
+    if x >= xborder:
         xvel = xvel * (-1)
     elif x <= 0:
         xvel = xvel * (-1)
-    elif y >= y2:
+    elif y >= yborder:
         yvel = yvel * (-1)
     elif y <= 0:
         yvel = yvel * (-1)
@@ -448,3 +449,5 @@ exit()
         #yvel
         #xvel
         #name
+        #xborder
+        #yborder
