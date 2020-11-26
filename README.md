@@ -12,19 +12,19 @@ The default config is made for testing.
 This is my first real project in python.
 
 The commands for setup include:
--help
--start
--version
--colour
--resolution
--speed
--exit
--spos
--fps
--background
--size
--config
--drawbg
+* help
+* start
+* version
+* colour
+* resolution
+* speed
+* exit
+* spos
+* fps
+* background
+* size
+* config
+* drawbg
 
 
 These must be written in all lowercase or else they don't work.
