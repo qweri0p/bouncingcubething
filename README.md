@@ -3,7 +3,7 @@ Its a simple bouncing cube complete with setup.
 
 *THIS SCRIPT REQUIRES [PYGAME](https://pygame.org)*
 
-[Pygame](https://pygame.org) is installable using: "pip install pygame".
+[Pygame](https://pygame.org) is installable using: "pip install pygame" or the "Setup.py" file.
 
 
 

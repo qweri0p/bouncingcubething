@@ -2,12 +2,12 @@ import pygame
 import time
 import random
 import os
+import platform
 fps = 60
 bgr = 255
 bgb = 255
 bgg = 255
 Clock = pygame.time.Clock()
-clear = lambda: os.system('cls')
 bgrandomb = False
 bgrandomr = False
 bgrandomg = False
@@ -18,6 +18,11 @@ name = ("BouncingCubeThing")
 r = 255
 g = 0
 b = 0
+OperatingSys = platform.system()
+if OperatingSys == "Linux":
+    os.system("clear")
+elif OperatingSys == "Windows":
+    os.system("cls")
 x2 = 1500
 y2 = 1000
 xSpos = 750
@@ -28,7 +33,6 @@ xsize = 50
 ysize = 50
 setupdone = False
 drawBG = False
-clear()
 print("This is the setup.") 
 print("Type help for a list of commands.")
 while not setupdone:
@@ -71,7 +75,7 @@ while not setupdone:
     elif question == ("help size"):
         print("Size lets you change the height and width of the cube.")
     elif question == ("version") or question == ("ver"):
-        print("BouncingCubeThing V1.2 by qweriop")
+        print("BouncingCubeThing V1.3 by qweriop")
         print("https://github.com/qweri0p/BouncingCubeThing")
     elif question == ("help drawbg"):
         print("Drawbg toggles if the background should update every frame. Drawbg is currently", drawBG,end=".")
@@ -339,7 +343,6 @@ while not setupdone:
             title1 = str(input())
             name = title1
             titlesetup = False
-
 if bgrandomr:
     bgr = random.randrange(256)
 if bgrandomb:
