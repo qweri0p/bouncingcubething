@@ -27,4 +27,4 @@ The commands for setup include:
 * drawbg
 
 
-These must be written in all lowercase or else they don't work.
+These must be written in all lowercase or else they won't work.
