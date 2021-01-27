@@ -75,7 +75,7 @@ while not setupdone:
     elif question == ("help size"):
         print("Size lets you change the height and width of the cube.")
     elif question == ("version") or question == ("ver"):
-        print("BouncingCubeThing V1.3 by qweriop")
+        print("BouncingCubeThing V1.4 by qweriop")
         print("https://github.com/qweri0p/BouncingCubeThing")
     elif question == ("help drawbg"):
         print("Drawbg toggles if the background should update every frame. Drawbg is currently", drawBG,end=".")
@@ -334,7 +334,7 @@ while not setupdone:
             print("Background will not be updated every frame.")
 #nggyu
     elif question == ("nggyu") or question == ("never gonna give you up"):
-        print(":)")
+        print("We're no strangers to love\nYou know the rules and so do I\nA full commitment's what I'm thinking of\nYou wouldn't get this from any other guy\nI just wanna tell you how I'm feeling\nGotta make you understand\n\nNever gonna give you up, never gonna let you down\nNever gonna run around and desert you\nNever gonna make you cry, never gonna say goodbye\nNever gonna tell a lie and hurt you\n\nWe've known each other for so long\nYour heart's been aching but you're too shy to say it\nInside we both know what's been going on\nWe know the game and we're gonna play it\n\nAnd if you ask me how I'm feeling\nDon't tell me you're too blind to see\n\nNever gonna give you up, never gonna let you down\nNever gonna run around and desert you\nNever gonna make you cry, never gonna say goodbye\nNever gonna tell a lie and hurt you\n\n\nNever gonna give you up, never gonna let you down\nNever gonna run around and desert you\nNever gonna make you cry, never gonna say goodbye\nNever gonna tell a lie and hurt you\n\n(Ooh, give you up)\n(Ooh, give you up)\n(Ooh) never gonna give, never gonna give (give you up)\n(Ooh) never gonna give, never gonna give (give you up)\n\nWe've known each other for so long\nYour heart's been aching but you're too shy to say it\nInside we both know what's been going on\nWe know the game and we're gonna play it\n\nI just wanna tell you how I'm feeling\nGotta make you understand\n\nNever gonna give you up, never gonna let you down\nNever gonna run around and desert you\nNever gonna make you cry, never gonna say goodbye\nNever gonna tell a lie and hurt you\n\nNever gonna give you up, never gonna let you down\nNever gonna run around and desert you\nNever gonna make you cry, never gonna say goodbye\nNever gonna tell a lie and hurt you\n\nNever gonna give you up, never gonna let you down\nNever gonna run around and desert you\nNever gonna make you cry, never gonna say goodbye\nNever gonna tell a lie and hurt you")
 #title
     elif question == ("title"):
         titlesetup = True
@@ -343,6 +343,13 @@ while not setupdone:
             title1 = str(input())
             name = title1
             titlesetup = False
+#linus
+    elif question == ("linus") or question == ("ltt") or question == ("lttstore.com") or question == ("Linus Tech Tips"):
+        import webbrowser
+        LOL = True #FUCK YES
+        while LOL:
+            webbrowser.open("https://www.lttstore.com")
+            webbrowser.open("https://www.youtube.com/watch?v=0k1xU4Kp5Go")
 if bgrandomr:
     bgr = random.randrange(256)
 if bgrandomb:
